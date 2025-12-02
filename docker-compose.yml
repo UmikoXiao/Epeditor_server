@@ -1,0 +1,33 @@
+services:
+  energyplus-simulator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: energyplus-simulator
+    restart: always
+    environment:
+      - REMOTE_PROJECT_FOLDER=/mnt/remote/project/
+      - EP_WORK_DIR=/epTemp
+      - WALK_MODE=random
+      - NAS_USERNAME=your_username
+      - NAS_PASSWORD=your_password
+      - NAS_ADDRESS=10.0.0.1
+      - NAS_SHARE=temp/epeditor
+      - NAS_MOUNT_POINT=/mnt/remote
+    volumes:
+      - ./servers.py:/app/servers.py
+      - ep-workdir:/epTemp
+      - nas-storage:/mnt/remote
+    network_mode: bridge
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+
+volumes:
+  ep-workdir:
+    driver: local
+  nas-storage:
+    driver: local
