@@ -237,7 +237,7 @@ Create by: [Umiko](htps://github.com/umikoxiao)
 - [EnergyPlus](https://energyplus.net/) - Building energy simulation software
 - [NREL](https://www.nrel.gov/) - National Renewable Energy Laboratory
 - [Docker](https://www.docker.com/) - Containerization platform
-- [Epeditor](htps://github.com/umikoxiao/epeditor) - client side and offline simulation tools
+- [Epeditor](https://github.com/Umikoxiao/epeditor) - client side and offline simulation tools
 
 
 ## 🤗 CERTIFICATION  
@@ -247,4 +247,5 @@ Developed by Research team directed by **Prof. Borong Lin** from Key Laboratory 
 linbr@tsinghua.edu.cn  
 **If you have any technical problems, Please reach to:**  
 junx026@gmail.com
+
 
